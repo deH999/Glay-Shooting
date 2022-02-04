@@ -1,0 +1,152 @@
+body{
+   margin: 0;
+}
+.Shooting{
+    background:url("../img/dendi.png") no-repeat center center /100%;
+    height: 974px;
+    cursor: crosshair;
+  
+}
+
+.plate{
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    cursor: crosshair;
+   
+    
+}
+.plate::before{
+    content:'';
+    display: block;
+    width: 65px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateX(45deg);
+    border-bottom: 10px solid #000;
+}
+.plate:checked{
+    opacity: 0;
+}
+
+
+
+/* plate-1  Анимация для 1 тарелки*/
+
+
+.plate-1{
+    animation: move-plate-1 10s  ease 3 forwards;
+}
+
+@keyframes move-plate-1 {
+    0%{
+        left: 50%;
+        bottom: 0%;
+        transform: translate(-50%, -50%) rotateX(45deg);
+    }
+    50%{  
+        bottom: 60%;
+    }
+    100%{
+        left: 40%;
+        bottom: 50%;
+        transform: translate(-50%, -50%) rotateX(45deg) scale(0);
+    }
+}
+
+/* plate-2  Анимация для 2 тарелки*/
+
+.plate-2{
+    animation: move-plate-2 7s 5s ease 3 forwards;
+}
+
+@keyframes move-plate-2 {
+    0%{
+        left: 30%;
+        bottom: 0%;
+        transform: translate(-50%, -50%) rotateX(45deg);
+    }
+    50%{  
+        bottom: 60%;
+    }
+    100%{
+        left: 40%;
+        bottom: 50%;
+        transform: translate(-50%, -50%) rotateX(45deg) scale(0);
+    }
+}
+
+/* plate-3  Анимация для 3 тарелки*/
+
+.plate-3{
+    animation: move-plate-3 8s 12s ease 3 forwards;
+}
+
+@keyframes move-plate-3 {
+    0%{
+        left: 45%;
+        bottom: 0%;
+        transform: translate(-50%, -50%) rotateX(45deg);
+    }
+    50%{  
+        bottom: 60%;
+    }
+    100%{
+        left: 60%;
+        bottom: 50%;
+        transform: translate(-50%, -50%) rotateX(45deg) scale(0);
+    }
+}
+
+/* plate-4  Анимация для 4 тарелки*/
+.plate-4{
+    animation: move-plate-4 10s 17s ease 3 forwards;
+}
+
+@keyframes move-plate-4 {
+    0%{
+        left: 43%;
+        bottom: 0%;
+        transform: translate(-50%, -50%) rotateX(45deg);
+    }
+    50%{  
+        bottom: 60%;
+    }
+    100%{
+        left: 45%;
+        bottom: 50%;
+        transform: translate(-50%, -50%) rotateX(45deg) scale(0);
+    }
+}
+/* plate-5  Анимация для 5 тарелки*/
+.plate-5{
+    animation: move-plate-5 11s 22s ease 3 forwards;
+}
+
+@keyframes move-plate-5 {
+    0%{
+        left: 37%;
+        bottom: 0%;
+        transform: translate(-50%, -50%) rotateX(45deg);
+    }
+    50%{  
+        bottom: 60%;
+    }
+    100%{
+        left: 59%;
+        bottom: 50%;
+        transform: translate(-50%, -50%) rotateX(45deg) scale(0);
+    }
+}
+
+.plate:checked {
+    counter-increment: list; 
+}
+
+.score:after{
+    content:counter(list) ;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
